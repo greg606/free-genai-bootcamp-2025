@@ -1,0 +1,52 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Greg Szczotka",email = "greg606@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask (>=3.1,<4.0)",
+    "flask-cors (>=5.0.0,<6.0.0)",
+    "invoke (>=2.2.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "app" }
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-flask = "^1.3.0"
+poethepoet = "^0.24.2"
+pytest-cov = "^4.1.0"
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "raise ImportError",
+    "except ImportError:",
+    "if TYPE_CHECKING:"
+]
+
+
+[tool.poe.tasks]
+start = { script = "app.app:run_app" }
+test = "pytest --cov --cov-report=term-missing --cov-report=html"
+coverage-report = "python -m http.server -d htmlcov 8888"
+
