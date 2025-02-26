@@ -1,0 +1,23 @@
+[project]
+name = "opea-megaservice"
+version = "0.1.0"
+description = "OPEA Megaservice - A service for handling large-scale operations"
+authors = [
+    {name = "OPEA Team"}
+]
+readme = "README.md"
+requires-python = "^3.9"
+dependencies = [
+    "pydantic (>=2.10.6,<3.0.0)",
+    "opea-comps (>=1.2,<2.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# Remove FastAPI and uvicorn dependencies
+# Add comps dependency once available
