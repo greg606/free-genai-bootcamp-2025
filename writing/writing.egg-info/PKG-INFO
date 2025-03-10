@@ -1,0 +1,73 @@
+Metadata-Version: 2.2
+Name: writing
+Version: 0.1.0
+Summary: Language Learning Assistant - Generate and translate simple sentences
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit>=1.30.0
+Requires-Dist: openai>=1.10.0
+Requires-Dist: pillow>=10.0.0
+
+# Language Learning Assistant
+
+## Business Goal
+Students have asked if there could be a learning exercise to practice writing language sentences.
+This application takes a word group, generates very simple sentences in English, and provides translations in the target language (e.g., Japanese).
+
+## Technical Requirements
+- Streamlit for the user interface
+- Managed LLM with Vision capabilities (GPT-4o)
+- Image upload functionality for context
+
+## Features
+- Generate simple English sentences from word groups
+- Translate sentences to various target languages
+- Upload images to provide context for sentence generation
+- Practice writing translations with immediate feedback
+
+## Installation
+
+1. Clone this repository
+2. Install dependencies:
+
+   Using UV (recommended):
+   ```
+   uv pip install -e .
+   ```
+   or
+   ```
+   uv pip install streamlit openai pillow
+   ```
+
+   Using pip:
+   ```
+   pip install -e .
+   ```
+   or
+   ```
+   pip install streamlit openai pillow
+   ```
+
+3. Set up your OpenAI API key:
+   - Create an account on [OpenAI](https://platform.openai.com/)
+   - Generate an API key
+   - You can enter the API key directly in the application
+
+## Usage
+
+1. Run the Streamlit application:
+   ```
+   streamlit run main.py
+   ```
+
+2. In the application:
+   - Enter your OpenAI API key in the sidebar
+   - Select a target language for translation
+   - Enter a word group (e.g., "cat, tree, happy")
+   - Optionally upload an image for context
+   - Click "Generate Sentences" to create sentences and translations
+   - Practice writing your own translations and check against the model's translations
+
+## Requirements
+- Python 3.13 or higher
+- Internet connection for API access
