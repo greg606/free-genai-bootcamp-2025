@@ -95,6 +95,7 @@ def main(video_url, print_transcript=False):
 
 if __name__ == "__main__":
     # video_id = "https://www.youtube.com/watch?v=ZPQepR4B8eo"  # Extract from URL: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    video_id = "https://www.youtube.com/watch?v=J6B82SjPFYY&list=PLxNPzeuPCA7BWJ8Uy5XaSkCdkhei21FhO"  # Extract from URL: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    #video_id = "https://www.youtube.com/watch?v=J6B82SjPFYY&list=PLxNPzeuPCA7BWJ8Uy5XaSkCdkhei21FhO"  # Extract from URL: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    video_id = "https://www.youtube.com/watch?v=7THXEgSGgLQ"  # Extract from URL: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     transcript = main(video_id, print_transcript=True)
         

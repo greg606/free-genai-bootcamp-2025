@@ -1,0 +1,49 @@
+{
+  "audio_transcript": "Das Auto ist ein wichtiges Fortbewegungsmittel in der heutigen Gesellschaft. Es ermöglicht uns, schnell und unabhängig zu reisen. Viele Menschen entscheiden sich für Elektroautos, um die Umwelt zu schonen. Außerdem bieten moderne Fahrzeuge viele technische Features, die den Fahrkomfort erhöhen.",
+  "question": "Warum entscheiden sich viele Menschen für Elektroautos?",
+  "options": [
+    "A) Wegen der hohen Geschwindigkeit.",
+    "B) Um die Umwelt zu schonen.",
+    "C) Weil sie billiger sind als Benzinautos.",
+    "D) Um mehr Platz im Auto zu haben."
+  ],
+  "correct_answer": 1,
+  "explanation": "Die richtige Antwort ist B) Um die Umwelt zu schonen, weil der Sprecher erklärt, dass viele Menschen Elektroautos wählen, um umweltfreundlicher zu sein.",
+  "dialogue": [
+    {
+      "speaker": "Hans",
+      "text": "Hallo Maria, wie geht es dir heute?"
+    },
+    {
+      "speaker": "Maria",
+      "text": "Hallo Hans! Mir geht es gut, danke. Und dir?"
+    },
+    {
+      "speaker": "Hans",
+      "text": "Auch gut, danke. Ich habe eine Frage zu unserem Projekt."
+    },
+    {
+      "speaker": "Maria",
+      "text": "Natürlich, worum geht es?"
+    },
+    {
+      "speaker": "Hans",
+      "text": "Wir müssen bis Freitag fertig sein. Schaffst du das?"
+    }
+  ],
+  "context": "Hans and Maria are colleagues meeting at a café to discuss a work project.",
+  "speakers": [
+    {
+      "name": "Hans",
+      "description": "A 25-year-old student from Munich",
+      "voice_type": "male"
+    },
+    {
+      "name": "Maria",
+      "description": "A 30-year-old teacher from Berlin",
+      "voice_type": "female"
+    }
+  ],
+  "id": "73a39a32-259a-4f8f-b709-c83c57af28d3",
+  "timestamp": "2025-03-13T15:18:01.532200"
+}

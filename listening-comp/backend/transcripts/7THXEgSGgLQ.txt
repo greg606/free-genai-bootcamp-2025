@@ -1,0 +1,2589 @@
+hey this is angrew brown we're going to
+pick up where we left off in the live
+stream so I have this repo which is a
+fork from um uh du on but I really want
+to have um this into my main repo so
+what I'm going to
+do is I'm going to go to the internet
+here just give me a second sorry so I'm
+just getting things a little bit more
+organized here so what I want to do is I
+want to bring in these files into the
+other repo um into our singular one so
+things are a little bit easier for us to
+manage what I'm going to do is I'm going
+to go over to here and I'm going to open
+this um in my local directory here so I
+have some folders here we'll go into the
+omen King directory which is what I have
+and so there's this language learning
+assistant so what I want to do is just
+get rid of the dogit file and the GE
+ignore file or I can just copy the
+contents of it so it says language
+learning assistant but I want this to be
+called um rename this to like
+Lang Lang um
+listening comp for listening
+comprehension that's what I want to call
+it okay and so I'm going to open up
+another tab here I'm going to go back to
+this directory here and I'm going to go
+ahead and copy the contents of some of
+this so I want this this this get ignore
+and we probably want the read me and
+then I'll go into here and dump it in
+here okay this repository here Omen King
+language learning assistant you can pull
+it exactly where I have it you can find
+it github.com Omen King SL language
+learning assistant um but I'm bringing
+that into my main repository so things
+are more cohesive and I'm just going to
+close out vs code here um I guess I
+could use wind serve or I could stick
+using Amazon developer Q I'm just trying
+to decide what I want to do here um I
+know that Duan wanted to use itus
+transcribe and poly I might still use
+those I would like to see if there's an
+open source um solution that we can use
+locally as I would find that really
+interesting but um I'm just trying to
+decide what it is I want to do I kind of
+want to use
+whisper so maybe that's what I'm going
+to do I mean I could keep using Amazon
+developer queue but I'm just thinking
+like because I'm already using this I
+might as well go ahead and do that so
+anyway it's up to you what you want to
+do but I'm just going to switch over to
+whisper and so I'm just updating my
+whisper here or I keep saying whisper
+wind Surf and I'll be back here in just
+a moment all right we are back and this
+is reopened this is has some other
+project open here but I'm going to go
+ahead and open a folder um and where I'm
+going here is into my sites directory
+here whoops here and then from here
+we're going to the omen King directory
+and then we're going to the free J I
+boot camp one and then we're going into
+the listening comp I'm going to go ahead
+and say okay so what do we need to
+complete for this implementation well
+for the back end we uh we do have Amazon
+bedrock and I already have that hooked
+up and since it was so good I think that
+I'm just going to keep sticking with it
+um I probably would have normally used a
+different model but Micro again very
+surprised on its performance so I don't
+see any reason to change that we the
+transcription is done so that part of
+the the um the stuff that we're working
+on working on here is done um I guess
+the next step is to get the rag working
+and since we're using Chrome chroma DB
+we can stick continue to use that also
+be interesting to use zap the thing that
+um Ken colins was referencing but I
+don't know if that was a vector or
+Knowledge Graph or both um but what I'm
+going to do is go over to my front end
+here and take a look at what we have for
+our next step
+so um what I'm going to
+do is CD into we's do LS here we'll CD
+into
+the uh front end actually we don't have
+to go to the front end we can run it
+from here right I'm going to add some
+instructions here so my life's a little
+bit
+easier so we brought this in here um I
+don't need this in here we'll just take
+that out so say how to run front
+end and it's something like uh
+streamlit run frontend main that is
+exactly what it
+is okay and then how to run the how to
+run the back
+end right we're going to it's kind of
+that but we'd have to
+CD back end do pip
+install here and then maybe CD do dot
+back you don't have to run from the main
+but you might prefer to do it that way
+um and so now we have the how to run the
+front end and the back end set up here
+CD dot
+dot
+okay the other thing is that um you
+might want to create an environment so
+obviously we've created an environment
+here I think it was called LL app or
+something so say cond activate LL
+app that is what I called it I believe
+you can call whatever you want um but
+let's go ahead and see if we can run the
+back let say streamlet front front main
+just make sure that it's in good working
+order we are not currently running the
+back well actually no the backend code
+we don't run it separately because it's
+just referencing the code it's basically
+a single code base so you saw like in
+other weeks where we kind of had those
+separated out we had to run them
+individually this one is all one thing
+and so we have our chat with Nova here
+then we have our raw
+transcript here right let's make sure
+that still works so I'm going to go over
+to YouTube let me go find a
+link and you know if you're using Nova
+make sure you check the prices for it or
+again if you're not you'll have to swap
+this out with something else but I'm
+going to go ahead and look up
+um uh jlpt jlpt
+and5
+listening and there's a few different
+ones here but I'm just clicking to any
+one here it's this one this is the one I
+know really well this this this video
+right here so I'll go ahead and grab
+it and I'll go ahead and paste this in
+here this might be something we already
+have so I'm going to go ahead and hit
+hit enter and then download the
+transcript and see if it works so it's
+still working and we have the total
+characters Japanese characters things
+like that it's dropping it over
+here now something that um um and we go
+the same thing because it's the same Ur
+all I believe so we go over here and
+take a look here this one is called
+what it is this one's sy7 yeah so it's
+the same one and so it would just
+replaced the file there um we were
+having a chat history issue here with
+the top one I don't know I don't know if
+I care about that too much but I do care
+about structured data so here says
+transform YouTube transcripts into
+interactive Japanese learning
+experiences this tool demonstrate base
+LM capabilities rag stuff like that so
+the structured data processing dialogue
+extraction will be implemented here
+structure data view will be implemented
+here so we have this and this dialog
+extraction data structure so I'm going
+to go over to here and just kind of get
+an idea of what we're looking for so
+um maybe we can ask
+uh wind surf what it is that it wanted
+us to do so if we go into here I'm
+looking for structured
+data because clearly like you know we
+have the data and we could just dump it
+and so it reads it every time but
+wouldn't it make more sense if we kind
+of structured it in some way um because
+it's just a Big Blob of text so one
+thing we might want to do we have text
+cleaned dialogue extraction data
+structuring so we know that there is a
+pattern um there's an introduction to
+the to the the the audio one second
+maybe I'm going to get the audio sound
+in here so you can hear stuff so now I
+have the audio sound turned on and what
+I want to do is I want to go just play a
+little bit of it so you have an
+understanding what's going on
+okay so we have this intro part that's
+going to
+explain I don't see my audio picking up
+here just give me a moment to set the
+audio settings just one second all right
+so now we should be capturing the audio
+I'm going to play a little bit of it so
+you understand the structure it if you
+use some other than Japanese you have to
+figure out what structures underneath
+here listen for a
+second so it opens up the
+intro say like oh it's good to have a
+memo book for the test right they're
+just doing a slight introduction they
+just basically read the title and now
+they're just saying like you know have a
+memo book ready for for the
+test they're saying let's talk about the
+first uh M so we're looking at the first
+question 're they're explaining the
+format of the question so they're saying
+like you know you're going to be
+listening something and you have one to
+four options and you have to choose the
+correct
+option mean like to choose the correct
+answer
+right so now we're at our first question
+right so there's clearly stuff in the
+beginning that is junk that we want to
+pull out of there that we don't need but
+it does tell us you know what the setup
+is and so now we're on to this part
+where we have these four options and so
+it's always going to do do the same is
+going to introduce something have a
+conversation and then ask what the
+correct answer
+is so they're just asking that was the
+exact same thing I talked about this is
+the exact scenario
+like did you want milk and like you I
+want tea but I want milk and uh milk and
+sugar goes yes and now there's a a beep
+and so now what's going to happen is
+going to
+explain and so now they're asking what
+was the scenario and
+then okay so that's the pattern right
+and at the end there's probably some
+junk there so there's some stuff the
+beginning the end of the transcript
+which is not useful but what we need are
+those questions extracted out and so
+maybe what would be useful is to take
+the data and to break it out so what I'm
+going to do is I'm going to go over to
+the structure data and I'm going to say
+um I need I want to I want to uh we'll
+say I have a
+transcript and I need to
+extract I have a transcript of the
+of the J of a
+jpt listening
+practice uh practice
+test I want to
+extract all the questions
+out um I need to I need to extract it in
+the following
+way we have introduction
+conversation and then
+question
+okay and then we have answer I don't
+know if they they say the answer every
+time let's go listen for a
+second it's a different question
+does that
+ping which
+page s so they never said what the
+answer was right um and that's fine and
+so we'll go back over to
+here we'll say I have a transcrip to
+jlpt practice test and I want to extract
+all the questions out I need to extract
+it in the into the following structure
+per
+question um I already have I already
+have uh I want to
+[Music]
+use Amazon
+bedrock with the Amazon Nova micro model
+um I have other code that can be
+used to figure out how to write the code
+over in file get
+transcript I want the
+implementation for the
+data structure to be
+written in the structure data
+file there we go and so we'll go ahead
+and I'm going to put this to write mode
+can use whatever you want to accomplish
+what you need to do and I'm hoping what
+it will do is it's going to go in that
+that transcript and kind of follow the
+um the coding
+conventions that um Dan produced right
+so we'll see what happens
+here
+and you know I'm hoping that this uh
+casc will not create files that already
+exist that's totally
+fine so I'm hoping there it will go and
+produce that code for us and then we can
+review it and then if it dumps it out
+into the extractive view will be good
+place you know what I just updated when
+serence asking me to update again
+so you know I do update them but
+sometimes it just ignores
+it okay so we'll give it a moment to uh
+go through its implementation I also
+noticed this is new maybe I'm not sure
+NPC servers I'm not sure what that is as
+soon as I paused I got code so here we
+can see it's kind of following the
+structure we have introduction
+conversation question uh we have a
+dictionary we have this
+format it's using Amazon bedrock it's
+using anthropic clad so it's not doing
+what I asked it to do it's using Claud
+which is fine but I don't want to use
+Claud uh we have structured transcript
+please analyze the listening practice
+test scripts for this format it
+out
+um I guess that's fine invoke
+bedrock and you know we're going to go
+here and be like
+hey okay you didn't use the am the
+Amazon Nova micro
+model uh you know I don't want back
+Jason make it
+text just because Jason can be a little
+bit tricky and I don't know if we have
+any ways of formatting that um structure
+Json is a very hard thing to do and it's
+not what I want to be doing right
+now no it says Titan text model Nova
+keeps keeps talking about Titan text I
+don't know if it's like confused or not
+but like that's not what I'm asking for
+but we'll see what it does
+okay so now we have something returned
+here and it's done some major changes
+it's still not doing look like I told it
+like look you aren't
+listening you know in get trans file
+trip get
+transcripts oh sorry maybe like um check
+the code in
+chat I think I gave it the wrong file
+that's why it's confused to see what I
+mean with Amazon Nova
+micro and please
+review to see how to
+best keep the code
+consistent I think it's because get
+transcripts just downloads it and so I
+kind of gave it the wrong thing so we'll
+let it try again okay all right let's
+see what code we have here so if we take
+a look here transcribe scul transcribe
+um structurer which is fine so here now
+we have it initializing Amazon Bedrock
+the model ID we have the structured
+stuff so here it's saying break down the
+jpd practice transcript into uh into for
+each question format like this we have
+question introduction introduction text
+conversation
+um introduction conversation question oh
+there we go okay here's the
+transcript um and then we have the RO
+user we go down here is it using the
+model we asked it to
+use um I mean at least the code is
+shorter so I'll definitely take
+that oh and it's using Nova micro so
+yeah there we go now I guess my next
+question is like can we get it to
+actually called it has save the question
+structure the
+transcript okay so let's go
+here
+and if we take a look at this one here
+maybe we can try to follow the pattern
+that
+um dwan has what's really interesting is
+you can put a main in here and I guess
+it doesn't trigger it even if you import
+it so it says Bedrock chat this isn't
+Bedrock chat this is going to be called
+transcript
+structurer and then we don't need a
+while
+true what we need to do is let's just
+say structure yeah there we go
+[Music]
+uh I mean it's actually from
+transcripts for
+slash here and I'm going to go ahead and
+just rename
+this I'm not sure where it thinks it's
+going to save but we just want to get
+the output so if we take a look at this
+for a
+second this is going to produce an
+output and then we can save it
+separately and I don't know if I
+actually care for its implementation for
+that I'm going to go ahead and we'll
+just do a print on the
+structured text okay so now we have
+that I'm going to stop this I want to go
+into the back
+end I we could also probably just run it
+from here we say say
+python um
+backend structure
+data so it's saying transcript snow file
+here
+that's all Let It solve it on its own
+but the file is clearly
+there but maybe it's because it's within
+back end I'm not
+sure look the uh the file already
+exists check
+the the tree
+structure so we just going to help it a
+little bit to tell it to look for it
+okay and so now it's kind of working
+through that
+now and that was pretty simple just put
+forward SL back in there I don't know if
+it's going to affect it if we do it from
+other directories but here you can see
+it was instantaneous output
+back and so I mean we have stuff but
+it's not formatting
+it right
+so makes me think that it might not be
+working so we going to go up to
+here so here we have the prompt
+here and then the temperature set to
+zero so it's super creative which is
+fine I don't care um and we get a
+response
+back and I didn't notice any
+difference
+okay so what I want to know is like
+you know can you go to the
+web so say
+web can you go and find the model IDs
+for the Amazon Nova models because you
+know 1.0 is good for like basic tasks
+but for whatever reasons it's not
+structuring it so either there's
+something wrong with our code um the way
+we pass this in here or this model is uh
+not picking it up here so I'm just going
+to yeah interrupt the current one here
+and we'll hit
+enter and so I'm hoping what it'll come
+back with is those model IDs and then I
+can just swap them
+out so we'll just give that a moment
+okay so here we go we have a few here
+there's also premium but I don't want to
+use premium I mean premium's fine I just
+don't want want to spend a bunch of
+money if it's expensive um but anyway so
+we have that one
+already then we have model ID which is
+this one
+here and then we have Nova
+Pro okay and so I'm going to switch it
+over to
+light and we're going to try this
+again it's getting a little bit confused
+it's being a little bit aggressive
+here no I don't want that commented
+out and we'll go down here and we'll run
+it again we'll see what happens
+now
+H okay so I'm going to switch it out
+again and this time I'm going to do this
+one I'm not sure what it's confused
+about just it's fine just come on accept
+it there we go and
+so I'm going to try to run this with
+with Nova Pro see what
+happens so I'm going go back here and
+say you know no matter what what model
+ID I use uh the output
+from structure
+transcript doesn't
+produce um the struct
+formatting it just
+Returns the transcript as is so there
+might be something with our messages
+wrong here because we have user content
+but that's the user there so it should
+reply with the proper stuff
+right oh you know what it is it's
+loading the questions here hold on we
+have load
+questions so I would say like load
+transcript actually instead
+it actually makes sense what it's
+doing yeah we'll change that out and so
+here this is fine this is just the
+transcript and then uh what we actually
+want to do is want to say structure
+structure
+transcript and we'll print it out so now
+we'll go back to the micro
+and we'll wait a moment we'll see what
+happens okay now it's taking a little
+bit longer I mean the other one was fast
+because it was just loading a file it
+wasn't even hitting uh the endpoint but
+it did have a lot of data and the
+context was pretty
+large so i' say that's pretty
+good I don't know how many questions
+there
+are 17 it's showing 17
+here so you know how would I know if
+that's all them I wouldn't um at least
+it's being kind of consistent with the
+formatting I'm not sure why here it does
+um curlies around it but if it's
+consistent in terms of the output then I
+don't really care right that's like all
+matters to me is that it's consistently
+doing the same thing the thing that I
+want to do is I want to probably chunk
+it I'm just going to move to sitting
+here
+but you know what I'm thinking is is
+that we have it but I would like to
+individualize um the stuff
+here
+okay I going to run it again I'm going
+to see if it it produces the same
+output but once our data is structured
+it's not like we have to run this
+multiple times so it's not a big deal if
+it breaks it's more just getting our
+data in our structured format that we
+want
+I I just can't believe the conversation
+would be this short right so it has
+[Music]
+this I think it might not know that
+there's a start and a finish let's go
+back to the top
+here and let me look at the first
+question and see if there's a
+problem yeah so the problem is that
+um our prom
+it uh doesn't
+realize that there is an
+intro and an
+outro before it
+introduces the questions can we
+update our prompt to not include these
+and only
+extract the
+questions okay I can just tell because
+I'm looking at it here and I'm seeing
+like that's the first thing where they
+they're they're talking about I see N5
+whatever whatever this section also I
+think well this says no this says two
+people so that looks like it's
+correct we'll see what it it's updated
+with about the test focus on extracting
+the actual
+questions yeah and you can actually see
+that it always says the number here I
+think yeah it does so if we go to the
+last one
+[Music]
+I mean some of these conversations seem
+too short like how can that be the whole
+thing okay so we'll go ahead and say
+accept
+all and I'm going to go ahead and run
+this
+again so you know as said garbage in
+garbage out so if you don't do a good
+job formatting your data then you might
+have a something that's not that
+great okay so I'm not really
+sure here it translated it two people
+are discussing so um the The llm
+Returned
+English it should only return Japanese
+because the whole
+so
+here you know we say the situational
+step in the Japanese
+text of Japanese
+text of Japanese
+text um do
+not
+translate the
+Japanese text into
+English
+okay and so we'll try this again and
+then we'll see what we get
+and so now we have this but don't look
+like there was a bit inconsistency so we
+have the question well the question is
+fine
+here but we don't tell it to format the
+question like
+this right so that's a bit
+confusing maybe we can do is we can say
+like question like this I'd rather like
+have this kind of selection around
+it like this and then
+maybe this
+will help it
+understand okay so I'm going to change
+it to that
+format we'll see what we get now because
+we're at least trying to see if we can
+get consistent formatting here
+conversation
+conversation so notice another thing
+it's like repeating conversation
+right why why is it doing that so let's
+go to the first one which I know really
+well we'll go all the way to the top
+wherever that is
+mhm I'm not sure
+why it's doing that because there's not
+going to be two conversations
+right here here it's actually showing
+us the um possible choices right
+so what I'm trying to figure
+out like is that the last one if I go to
+this one
+here there one has three options too
+the end they're
+giving the last one's a little bit weird
+I think maybe because the format of the
+question
+changes here it is oh there's three
+types of question formats the mondai
+3 right so this is where we're running
+into a problem because I didn't realize
+that there's a section here this is
+mondi one so like question one so this
+is going to follow a particular format
+of one and four
+right and so then in
+here we have three and this follows a
+different format this is between one and
+three options I think what it's playing
+is like it plays out a story and then
+you have to listen to multiple uh points
+for it
+right
+um so this is where this is kind of
+messed up I'm going to commit this right
+now I just want to kind of have access
+to this code before I change
+it and maybe I'll just open this in
+Visual Studio code real
+quick or gex or smart X keep talking
+about using get smart I'm going to go
+use it I'm G to get smart right now and
+use
+it and here it says evaluations ends in
+six days you need a registered license
+oh maybe I'm not paying for this that's
+kind of annoying but um I'm in the um
+the this is the wrong repo but I'm going
+to switch over to a different repo
+um try to remember how to switch repos
+in this file or maybe just add it up
+here and that is the repo there we go
+and so these are all fine so I'm just
+going to commit
+this uh working for the
+transcript formatting this is probably
+the part is just trying to format the
+um these transcripts and it really
+depends like we could use it to do it
+manually or what we could do because
+there's only 17 questions but the other
+thing that we could do is we could also
+I don't know it depends because there's
+a whole playlist it'd be sweet if we
+could pull the whole playlist what I'm
+going to do is go back over to here and
+I want to explain like um the
+transcript appears to have
+three question formats
+follow uh three
+sections with each
+section having a
+different question
+format
+and uh each section
+explains the question
+format so we need to uh change our
+prompt to extract out those three
+sections the description of the
+format and then the
+questions okay so let's see what it does
+for
+that and it'll take a look
+there but if we're getting
+inconsistencies with micro then we might
+want to move up one layer and then try
+to use um light as it might give us more
+consisten
+we also set have it set to zero so that
+means that it should be wildly
+consistent so you're suggesting
+section section format explanation
+Japanese
+introduction
+situation okay so it's updated
+it exactly as is is ignore any practice
+uh
+examples marked with
+that I mean I guess
+so I'm not sure why it's saying marked
+with
+that I don't know what this character
+means so let's go take a look at what
+that means so I can go here I'm going to
+go to G
+show and we'll paste this in here we'll
+say
+conji and so this is example customer
+usage okay but why why can't we use that
+I don't know this is where you have to
+really be a domain expert of the content
+content and I'm not so we'll do our best
+here but we'll go ahead and we ran this
+I think did I just run this right
+now no but I'm going to go ahead here
+and just type in
+clear and we'll give it a moment here
+and so now we have our different
+formats let's see if we can make sense
+of
+it so here we have a section it
+describes the section one to four
+doesn't say how many there's going to be
+then we have our first question then we
+have our second question we have our
+third fourth I'm waiting for the next
+section to
+start question
+question
+question then we have a section here now
+what we might want to do and it could
+depends but like if we wanted this to be
+a bit better we might say hey like tell
+it like hey there are three sections and
+only extract out section one uh but
+right now I'm not sure if that really
+matters then we have this one where it's
+saying between one to four
+questions okay so we have this one which
+is fine
+and then we have this section which is a
+bit
+different where we have a
+question
+question
+okay so I guess like what like if maybe
+we should dump the contents here so what
+I'm going to do is dump this here let's
+see if we can save this
+it will say um
+structurer save
+questions backend questions right so
+that will be that and so this way we can
+then analyze that file and ask if it did
+a good
+job we'll run it again and then we'll
+let it
+dump we don't even need to have this
+here this can get out of
+here but this is going to be the hardest
+part is just structuring the data that's
+pretty much everything else after this
+should be really easy
+and so I'm going to go back over to
+um our transcript
+here uh I didn't create
+it so maybe because it doesn't have that
+folder it couldn't do it here we have uh
+this I'm going to make a new folder here
+I'm going to call it
+data and I'm going to put transcripts in
+here and I'm going to go here and make
+another
+folder
+um
+and
+questions and then I'm going to go ahead
+here and say
+data data and this way it should
+hopefully work because I don't think
+this thing can create folders so it
+either has to be there or it's not
+and we'll give it a moment
+here and now we have it right
+so checking our
+output under
+questions under questions
+folder did uh does the structure
+outputed
+structure make
+sense does section
+three in
+particular makes sense because again
+what I understand section three is it's
+going to ask you a Ser like information
+that you you try to choose a series of
+questions and so we'll see if it
+analyzes that file properly
+it's not about matching phrases to
+situational visual cues uh means while
+looking at the picture illustration the
+current format doesn't properly reflect
+this for section three the current
+structure is forcing conversations where
+there aren't
+any instead it should be more like this
+question situation options
+question okay and so it's going to go
+update it now one other interesting
+thing I didn't think about this when I
+was making is that we see an image right
+that describes something do we need to
+generate out an image for this to work
+like to make it really clear and so that
+might be something that we might care
+about clearly distinguish between the
+different types of questions in each
+section
+okay okay and we'll take a look back at
+our prompt that we have here
+and so it says conversation B has a
+situation setup contains a question uh
+asks a question with the conversation
+phrase matching questions show a
+situation ask what phrase to use in that
+situation no conversation
+involved format the output like
+this okay good so now we have improved
+output and I'm going to go ahead and
+delete this you see how wind surf is
+really easy because you can analyze the
+file in place and then fix it we'll go
+ahead and do that and run this again
+we'll see what we get as our
+output and so we'll go back over to here
+again using a very cost effective model
+which is
+nice and so we
+have very little data in here there's no
+way this is this is all of it
+right okay so it looks like the
+um seems too short can we break up this
+task so that um there are
+three llm calls and three prompt
+documents each
+responsible for extracting
+out the
+sections uh each responsible for
+extracting one of the sections
+okay and then save the
+output uh of each section
+separately okay and so let's go ahead
+and do
+that so it'll rework the code there
+we'll give it a
+moment now will it be smart about
+refactoring the code that's another
+story that we're not sure about but you
+know we don't need to focus on every
+single section we could have even told
+it just to focus on Mundi 1 type format
+questions because those are the first
+ones we're looking at and but we'll see
+what we get here in a moment all right
+it's generated an update here and so
+let's take a look what it's done so we
+have the first prompt I'm just going to
+accept it so I can e easily see the
+output here but we have
+prompts and we have prompt number
+one prompt number
+two prompt number
+three we have invoke Bedrock I'm not
+sure why I gave it an underscore but
+that's totally fine
+and if we go all the way down the
+bottom just using the converse API I
+don't know if we really I mean like we
+can use the converse API but since these
+are all single action it's not really
+necessary but we do get a consistent API
+that we get to use here so have
+prompts try to make sense of
+prompts okay so here it's running the
+sections 1 to
+four are there four
+sections I only see
+three maybe it stops on three I don't
+know but let's go ahead and give it a go
+see what happens
+but yeah now I'm wondering like do we
+need the images because if you don't
+have an image how would you know what to
+choose
+right um and now we'll give this a
+refresh here let so we have section
+one section
+two section three so we have a lot more
+text
+now okay
+um what's kind of weird is like they put
+the section up here at the top that's
+that's totally fine I guess but now I'm
+just kind of thinking like okay we have
+this
+here where you need to say the
+appropriate it's interesting that it
+describes the format up there in
+English this one's in Japanese this
+one's in japanes so it's not being
+consistent in terms of that stuff I mean
+I don't really care about the format
+description
+is that doesn't really matter to us what
+matters to us is the extraction of these
+questions and so I guess I care I care
+more about the initial questions I'm not
+sure why it's doubling it up here on
+this
+one it is doubling it up on here as well
+so I'll say you know look at the
+outputed
+um let me just delete this one
+here looking Maybe maybe we can just
+take a look at the actual prompt
+here back over to
+here and hold on here we have let's take
+a look at this prompt because it seem a
+bit confusion here so we have question
+introduction section format
+description I mean we don't need the
+format question description in the
+actual thing
+here I'm going to switch it to what
+happened to our other model we'll go
+back here say model ID
+equals amazon.
+noova
+light and let's try to swap that out and
+see if we get a better
+result we might not but there's a few
+things we don't really need here and so
+you can see we could be spending a lot
+of time trying to get this data to be
+the structure that we want it to
+be that's probably where you have to
+spend a lot of your time
+yeah so we'll give it a moment here to
+generate so now if we get this a refresh
+here we have our sections I see no
+doubling up here anymore this one's not
+doubling up anymore
+um it is getting a bit confused about
+what to show here notice this like says
+a section here and um we'll go here so
+okay so looking at the generated
+questions generated out uh output I
+don't need the sections to be
+described within the uh questions
+output because we already
+know what they
+are based on the prompt um can we get
+that so can so can we only have
+questions in our
+outputed prompt data or outputed uh
+questions data okay we'll see if we can
+correct
+that and so you know some of the
+formatting looks wrong but I'm just
+hoping if it removes it completely then
+we'll end up with that so then we have
+to worry about whether this is English
+or whatever and we can just kind of move
+on from that like
+that the other thing I'm not sure about
+is like would a vector story even make
+sense for this because Vector store is
+for um uh
+storing highly relational data
+right or non highly relational data like
+like like semantic data I I don't know
+because this has a structure I almost
+kind of go well maybe it should not be
+that but we'll see what happens I'll
+remove all three prompts I've updated
+all three promps remove any section
+format descriptions from the output add
+explicit rules to not include any
+section description or other text should
+be only the output okay and so I'm going
+to go ahead and try to run this again so
+we'll go ahead and delete this we really
+should check over the prompt but I'm
+just going to go ahead and do this first
+and so this might just kind of solve our
+problem
+so we'll give that a moment
+here and give this a
+refresh and now it's outputed we're
+going to give this another refresh here
+we'll drop this down we have our first
+section um so we have our question
+introduction
+conversation question right then we have
+our next one introduction conversation
+question then we have our next one
+introduction conversation question so
+this one's looking really
+good this is what I want this is perfect
+we'll go to the next one introduction
+conversation question I don't know what
+the difference between the uh the first
+and second section is but I'll have to
+read that later let's go to the next one
+we have question situation question
+question um this is's a little bit
+weirder
+formatted here we have
+question oh situation
+question so yeah I'm not exactly sure
+what to do that section I don't really
+care we'll just F like first the first
+and second section are pretty good but
+the problem with the first section again
+is we don't have images to show them um
+now we could show text which is totally
+fine but we need to enrich it so I what
+what we need is we need an answer or a
+description of what the possible answers
+could be but if if it if there's an
+image then we need to describe what that
+image is right and then we need to
+generate it out so I'm going to go here
+and I'm going to say um
+can you I'm just trying to think about
+this for a
+second first I'm going to accept all
+changes
+and I guess what I want is like this
+data is incomplete I need it to have the
+the possible
+answers okay for section
+one we need to
+um
+show the possible we have need to show
+an image
+so I need an image
+description of the possible four
+options
+um for section one we need to show an
+image so I need I need an image
+description of the possible possible
+options the other thing is that you know
+if we don't have an image then we then
+we would have text but the problem is
+that some of these questions if you if
+you don't use an image and and use text
+you're kind of giving away some of the
+answer right or you know now you're
+bringing them out of Japanese into
+English and so by never showing English
+text uh that might be a little bit
+better but we could also just show
+Japanese text as the possible options
+but that might make it a little bit hard
+so I'm not sure about that for section
+one we need to show an image so I need
+an image description of possible options
+that is part of the questions uh
+output can you update the
+prompt and so let's see what we get
+the only problem is like how am I going
+to get a good output for
+that Amazon Bedrock also has um an image
+prompt and so that might be something
+that we might want to try to play around
+with I will probably log in they'll use
+stable diffusion I believe but I'm going
+to actually log in AWS and we're going
+to explore that together and see if it
+can even do that like get what we want
+as our output I'm going to just run this
+again and I think it replaces it there
+so that's not a big deal and I'm just
+logging into my adabs account off screen
+here
+okay so we're generating out that
+structured output we're going to go over
+to
+um
+Bedrock okay and I want to see if that
+output is there
+[Music]
+now options so that's now it's saying
+options here which is fine and this one
+technically is right it's like py
+whatever whatever whatever whatever um
+the only problem with this is that like
+these are technically the options that
+we have and they're not that
+bad
+but again now you have to parse the
+Japanese text as opposed to a thing so
+it's up to us whether we want to
+um fix
+that but like I'm going to go over here
+for a second
+and copy this one here and I want to go
+over to um
+Claude this is a Japanese uh test
+question the choices need to be display
+the four
+choices to be displayed as an
+image can you write me an image
+prompt and so I'm going to provide it
+this
+I didn't say make me it I
+said no I said image prompt so I can
+create generate an
+image with uh something
+like stable
+diffusion okay
+so I'm going to go ahead and grab this
+here and now that I'm long to Amazon
+Bedrock I'm going to go over to uh the
+playground for
+images and we'll select a model we have
+oh we have Titan as a image
+generator
+um canvas real is for videos can like if
+you're afraid of spend don't do this but
+I'm going to go ahead and do this cuz I
+don't care and I'm going to go ahead and
+run this and we'll see what we
+get now this is a little bit slow so I'm
+not again if this is too hard we'll
+we'll just leave it on the Wayside here
+but it's something that would be
+nice so that's no good that's that's not
+going to work so a minimalist education
+uh test layout on a clean white
+background displaying Japanese text the
+layout has a definition of the top um so
+I would say this output for the prompt
+is not good so I go back to this and say
+you
+know the output the output is no
+good um it you know it should
+be white
+background uh black and
+white line
+drawings it
+[Music]
+should have four Images four boxes of
+images okay no other text around it okay
+so we'll go ahead and do
+this I'm going to go ahead and grab this
+one it's trying it thinks it's it's
+using stable diffusion I actually have a
+or Discord uh what's it called this um
+Mid journey and I actually have a Min
+Journey account so I can go over there
+and try it out I'll just try this out
+for a second
+here mid
+Journey I'm just logging in I got to
+really uh cancel mid Journey it's not
+not as good as it used to
+be but I want to to see what happens if
+I put the prompt and so I'm doing this
+off screen here so you're not seeing me
+do
+it but um I going to try and generate
+out this again for on
+Bedrock so try this
+again and maybe what it really should be
+is like generate four separate images I
+might have an easier time doing it so go
+over here and so this is actually not
+bad but the question is is it
+descriptive of it so four panel layout
+of pure white background line art
+illustration minimalist architecture
+panel a simple line drawing with stairs
+with a wall next to it panel two a
+simple L line drawing of a store
+shopping a simple line drawing of a
+department store sign panel for clean
+thin back back lines architectural
+sketch no text no shading etc etc so you
+have those four there and I don't know
+if it's really descriptive of what it is
+you'd have to know what this says
+here
+um but if I look at I take a look
+here I'll make it a little bit larger so
+I can kind of read
+it so here we have departo so a
+department right
+no so a
+man
+no and then somebody that works at noo
+someone that works at a shop and they're
+talking so they're talking together and
+so the man
+asks
+says
+Heim so he's asking where something is
+no suen
+so it's setting up saying like the man's
+going to ask where is it I knowum
+must so he's asking where the bathroom
+is so he's saying like where is the
+bathroom and the lady's
+saying okay well um the
+bathroom uh is over there there's the
+stairs okay so I remember this this
+actually has to have a map so there's
+really no way that this is any
+good right so it to to be able to draw
+this out I'll show you actually what it
+it's supposed to look
+like it's totally fine if this doesn't
+work because you know we're finding the
+limits of it but this is the drawing of
+the the thing that's going on so here
+you see the stairs over here right and
+then over here you have the bags right
+and so in the text it's going the toilet
+it is it's over there so if you look at
+the stairs it is beside the
+stairs right so saying it's beside the
+stairs
+Yoko
+Yoko go so beside the stairs I think it
+say
+Yoko and he says
+um and so basically it's confirming
+saying okay so she's saying it's beside
+the stairs it says across like opposite
+of the bag store and it's like yes so
+this is where it
+is so the question is can we even get
+that illustration right so that's kind
+of another problem where if we don't
+have this
+information right from the video there's
+no way we're going to get the result we
+want but what I'm going to do is copy
+this
+here and we'll drop it into CLA here
+okay this is the
+image this is the original
+image can you describe
+it so we can generate
+it and this is where you kind of a
+challenge so you might have a question
+that is always about directions right
+and to get what you want maybe instead
+of generating image you'd actually use
+something that would generate out a
+layout and so it's not like this is the
+best that we want here but you can see
+this is where we're kind of having a bit
+of a
+challenge and so here it goes let me
+create a more precise topown
+architectural for plan with this top
+downstairs
+whatever I I don't know if like it could
+even make that like if we go and ask
+this to Amazon Bedrock I don't see how
+it could even generate that but I'll
+give it a try and I'm going to go back
+over to here to this I give it a try
+here but I can't
+imagine yeah I don't care about the
+aspect gra let take that out of there
+okay and maybe the negative prompt
+should have went in the negative prompt
+if there even is one here and there
+actually was a negative prompt over over
+here they're actually providing it to us
+and I didn't paste it in the correct
+location but actually look at
+that actually is not
+bad but was it accurate to the
+description
+provided right so if I take this
+here I want to make it larger can I make
+it larger
+download this
+here and we open this
+up right so we look at this I'm not sure
+why there's shoes
+everywhere but we are we are getting an
+illustration right so this is where we
+kind of run into some challenges but you
+can see that we have stairs over here
+this is book book it's just all weird
+stuff so that one's not going to work
+for us let's go to the next
+one again I mean like it's a
+thing but it's not accurate to what its
+output is right and we go over to this
+one um again I'm not sure if it worked I
+had animals trying to tell like a a
+story as an example we'll go back over
+to
+here and so we look at this
+one that's a
+mess that's a mess that's a mess that's
+the mess so I mean it's cool that we
+have
+diagrams but the problem is that
+it's not reflective of the description
+so that's not going to work so the only
+way this might work is like we generate
+out an image first right and
+then we uh we frame the question around
+it but then that kind of destroys our
+whole rag process here right so that's
+where that's where I'm kind of
+struggling so what do we do because we
+want this to do something but I don't
+think this is going to work
+unless we we change the scope of it
+where we say okay we're not relying on
+images and we're just going to have text
+but is that
+useful um I don't know because if we
+can't see the
+image
+here right we can't answer it and so
+then the question fundamentally has to
+change but we need the visual to do it
+um so the next thing I can say is like
+okay is there a way to generate an
+architecture so like you know the image
+is generated so I'm going to go back
+over here
+so is there a
+way to generate out a floor
+plan with some visual mockup
+language that's what I want to
+know using mermaid oh could it use
+mermaid
+okay
+that's yeah that's that's no
+good like real floor
+plan
+mhm now trying to use SVG I can't
+imagine it can do
+it I really don't think it can do it but
+we'll let it
+try actually that's not bad
+okay great can you um let's give it
+something more
+advanced so I'm going go back to the
+other
+one and we'll go back to our history
+here and we'll say you know can you make
+a floor
+plan based on this
+description
+okay but the way this is the only way
+this is going to work is that we'd have
+to to basically like for we'd have to
+make question types like literally what
+we wanted to be and generate derivatives
+so if we wanted to show um like based on
+directions we would have to really
+really engineer that specific one
+because just can't handle generic
+questions and generic image generation
+or we have to creatively think about it
+and generate the image first as a result
+and then figure it out there okay so
+like okay but where's where's the rooms
+uhhuh yeah but notice like this isn't
+going to work if it has to do it
+multiple
+times unless there's a way to
+self-reflect and look at the images so I
+don't know I think we might have
+something that's impossible to do
+um so looks a little a little bit better
+but that's still not going to help
+us okay is is there a sketch up SketchUp
+language for floor
+plans no no no no no no not
+asky I mean like a real thing
+yeah but any yeah but like
+architecture software floor
+plans but open source and
+programmatic yeah and it seems to be
+confused I'm going to go here and ask
+perplexity is there any software is
+there any open source software that can
+produce architectural floor
+plans via code that look good okay so
+that's what I'm
+asking and so we're going through here
+and so
+um freeat I don't know what freeat is
+let take a look here
+so free freead is
+one an open source building information
+Library tool let's take a look at this
+one blender blend we're not going to use
+blender that's insane
+um we'll go
+here great say you know can you generate
+the floor
+plan is a file or fread can it do that
+or is that too hard I don't know like
+okay
+[Music]
+but
+previously you know so here like we're
+going to struggle the only thing I can
+think of is like four images or four
+options I don't
+know so it does have a stair symbol and
+stuff like that so that's kind of
+interesting I maybe this is not the best
+thing to do but I'm just curious I'm
+going to see if we can do it freead
+I'm not suggesting folks to actually do
+this but I'm just curious to see what if
+it can actually do
+it and we'll do
+x64 download that I'm going to wait for
+that to finish
+downloading I may not even run that so
+you know maybe we can do let's just
+think about this another way maybe we
+can do is like okay um know can you
+review all the questions and tell me
+which uh tell me how
+many rely on an image and and tell me
+and can all the questions and tell me
+uh in a bullet
+list single for each
+question if it would rely on an image to
+determine the
+answer that's what I want to know
+because maybe there are questions that
+don't right so then we just keep them
+out of the filter
+and we'll give that a
+moment all right um so let's take a look
+and see what it analyzed so yes needs
+the image to be shown spal layout uh no
+answer is clear from conversation yes
+yes yes yes no answer is clear from
+conversation no answer is no no no no no
+no no and so the thing is is that what
+we really
+want is to know if they need that or not
+so five out of the 18 uh would benefit
+from having the images this makes sense
+as section one appears to be testing
+spatial visual comprehension okay so
+basically now what we need to do is we
+need to eliminate
+questions um from our stuff so okay how
+can we
+eliminate uh eliminate questions which
+require
+spatial um which require an
+image to
+understand that's what I'm asking
+it because if we can do that then we're
+back back in back to doing good stuff
+because I I just don't think image image
+generation is is there or it will
+require a very very considerable amount
+of work to get it to do what we
+want and here I think it's focusing on
+part
+one
+okay and so we're going to go back over
+to here
+uh and I actually don't need it to run
+um I don't know I did that I shouldn't
+have done that so we'll just stop that
+for a second and so we'll go back over
+to here section three so I would say um
+you know can we uh apply that to section
+two as well
+okay and so then we'll be in a place
+where we can you know see what we need
+to see right
+it it likely won't remove any questions
+since they were already dialog based
+this is consistent with the typical
+format where section two tends to focus
+more on comprehension of spoken
+information rather than visual elements
+so maybe we shouldn't be doing the first
+SE first section anyway if the second
+section is more about spoken
+elements okay but it does seem to
+suggest that some of them require an
+image let's go back up to here and take
+a
+look actually no none of them require a
+section so maybe we can just skip
+section two okay so um you know can we
+comment out section two for
+now because obviously section one's just
+not going to work for
+us okay great and so I'm going to go
+ahead and accept accept all the changes
+once it's
+done okay and and I'm going to go ahead
+and do this I'm going to delete out
+these sections just make sure that this
+goes good here we'll go ahead and hit up
+but seems like section two is probably
+our best
+bet
+right okay we'll go back over to
+here so it's say you know you know would
+we
+benefit to storing our
+um questions
+in one second
+here all right so now that we um you
+have the stuff the question is like
+would we benefit storing our questions
+in a vector
+store
+um because the app we are creating needs
+to um
+reference the existing database of
+possible questions
+and generate
+derivatives vnl
+on let's see if that works because
+that's what I don't
+know
+um semantic search when generating
+derivative questions we want to find
+similar questions based on their context
+structure and topic a vector store would
+allow us to perform semantic similarity
+SE
+es uh we can use the vector store to
+quickly find relevance questions to use
+as
+examples uh we can store not just the
+text but also the structure
+format as metadata making it easier let
+me propose an implementation using
+chroma DB which is what we're
+using um but I think it knows it because
+it's in our code base
+right but really we should be doing this
+over here in our vector and in there it
+says vector
+store I didn't really want it to do
+that because we want to treat these as
+separate isolate stuff right like we'll
+give it a moment
+here I'll let it finish but I really
+didn't want it to be this aggressive and
+this is my problem that I chose right
+not
+chat or I told it maybe don't change any
+files let's just talk about
+it we'll wait for this to
+generate all right let's take a look at
+what it
+did um so we have here Vector
+store I have to zoom out so I can see
+what's going on
+it's using open AI I'm not sure why it's
+changing um I mean we could use that for
+embedding I suppose but now we're kind
+of mixing mixing stuff here I'd rather
+just continue on with Amazon Bedrock for
+embedding
+models here it's taking a look at the
+collections that we have
+here and inserting them it's adding the
+questions so we here we have ADD
+questions so only sections two and three
+are currently support
+Ed and it's going to enumerate through
+the
+questions how does it know that it's
+going to break up each question right
+[Music]
+so I mean this is fine and all but like
+the problem is is that if you have
+this right um
+you know like I you know I I you know I
+don't plan on like I can see that
+example question you want to parse from
+these text files so sections to add
+questions to the vector
+store um so I'm trying to make sense of
+this here's here we have example uses so
+here we have the storage here's an
+example
+question add it but it's not in this
+structure
+though okay so that's kind of annoying
+uh we go back up to over here it's just
+putting it back into a document so you
+know I don't understand like you know
+first of all we are using Amazon
+Bedrock
+so so we don't want to change also what
+did it change over in our other one our
+structur data
+here right so it's parsing the questions
+which I guess is something you can do
+here
+um which is fine I suppose
+but I mean maybe just say like use
+Amazon b
+rock to do the
+embeddings not open AI because then we'd
+have to use another one I don't want to
+really mix things up
+I'm not sure if it would use the latest
+one here but we'll take a look here it's
+going to remove the open AI reference um
+and you can see here like we have why
+does it say video
+ID there is no video ID so it's kind of
+weird that it well I guess there is a
+video ID up there so I'm actually not
+that's not completely wrong we'll give
+it a moment there to work there we'll be
+backing in just a moment let's take a
+look what it did so created a new
+function class why does it have to make
+a whole freaking class for that
+um embedding interface uses Amazon bedar
+Titan embedding really wants to use
+Amazon Titan embedding so you know you
+know is there is there a newer
+embedding than Amazon
+Titan embed text for well I mean we
+could just probably check because I know
+that I'm logged in somewhere
+here jws give me a second
+here so we just go look at the models
+and we can find it that
+way go to the mod model catalog
+embeddings and so they have a version
+two what's the
+difference multilingual support with 100
+languages we'll go to the other one does
+the other one have multilingual support
+because if it doesn't then we really
+shouldn't be using um the other one so
+we go over to this one here
+it says
+V2 G1
+text Ball Sports Plus 25 different
+languag optimized for text
+retrieval and does it have Japanese in
+here it does so we can use the the first
+one I don't know how much of a
+difference it will make based on the
+embeddings embeddings will change how it
+stores the data like to turn into the
+numbers but that's totally fine so here
+we have the questions being par St like
+that no need for additional apis your
+services tighten embeddings consistent
+infrastructure and this function now
+handles it I wonder if it got rid of the
+old junk in
+here uh I think
+so
+okay so I'm going to go ahead and I'm
+going to accept this
+okay okay um so now that we
+have that there it's not in our rag file
+so this is kind of uh pointless here I
+don't really care we can go ahead and
+just delete this it's
+fine be nice to have it but we can have
+it over here as well now the question is
+how do I test it so we go down below
+here um we have an example here of using
+the uh the
+service so let's go ahead and see if we
+can uh do that so I'm going to go ahead
+and
+say python
+backend Vector
+store so the number of requests five is
+greater than the number of the index one
+updating updating the results
+one okay just explain I don't know this
+is bad or not but let's just like can
+explain it to
+me because we're only bringing in one so
+that makes sense so can you explain
+this please don't change code
+I'll move it over to
+chat
+M we only added one question to the
+vector store the birthday question but
+in the search we're asking for Five
+results where are we asking for
+five is telling us we can't um turn Five
+results there's only one is expected
+Behavior I guess that kind of makes
+sense and so then here we have our text
+that we want to provide
+right okay where are we getting this
+N5 so like
+where where are we specifying
+Five
+results I see now method we have a
+default parameter results
+N1 with five and uh we can call in the
+code in the bottom we don't specify end
+results so use the default five since
+we've only added the questions to the
+database and that's fine um now I guess
+my question is like we need to insert
+all the data so let's go back over to
+structure data here and I need to figure
+out how to run
+this okay so can we
+um and say you know can we
+so what I'm trying to understand is it
+oh it does parse the questions and it
+adds it to the vector store so I don't
+really like how this is fully integrated
+because it really should be separated so
+the one outputs the file and imports it
+and so it's pulling in the vector store
+so I'm going to go here accept it and I
+want to say like I want the vector
+store pi and
+the
+um what's it called uh in the structure
+data
+scripts to be
+isolate uh you updated it so
+that so that the structure data is
+inserting is inserting directly into the
+vector
+store um I would rather have the parsing
+being
+done by the by reading the outputed
+files
+from the vector from the
+um structure
+data I would rather the parsing be done
+by reading the output from the structure
+data by the vector store
+file because then we're coupling our
+code very tightly and I want them to be
+decoupled
+right
+and please proceed
+to decouple the
+code AS asked okay and so we we'll go
+ahead and ask that because then that
+way we'll get a better result so we'll
+give it a moment there to fix that issue
+all right so hopefully it is removed
+that code and so now those things are
+isolate we are still using the light
+model we probably go back to the micro
+but I'm just getting good results with
+this one I don't really want to fiddle
+with it more so here's removing the the
+vector store if we go down below it's
+removing all this code as I did not ask
+for it to put it in there and so now
+that stuff is in isolate which is better
+let's go over to the vector store and
+see if it's added it and so the parser
+is over here and we can see here it's
+adding those questions and then chunking
+them there and so this is a much better
+solution to what I'm looking for so I'm
+going to go ahead and add that and the
+only thing is that this is going to both
+insert that stuff but also do that as
+well um we probably want a larger data
+set to work with and we'd have to grab
+all the transcriptions
+um it would be useful if the way that
+API works is if it grabbed everything
+from all those YouTube videos and I
+suppose we could change it to do that
+I'm just trying to decide whether I want
+to do that or not because I don't know
+what the consistency of the videos are
+between each one now normally they
+generally will follow this kind of
+pattern but like those three sections
+but you know maybe we could pull all
+those questions and do that and get get
+rich data but for now what I'm going to
+do is I'm just going to accept this I'm
+not sure where it's storing the data by
+the way oh it's over here
+okay and I'm going to go ahead and try
+and uh run this so we're going to go
+here to the back end as the front end's
+totally fine we don't to do sorry we
+don't have to change the structure data
+we'll run this and so what I'm hoping is
+that it's going to iterate through so it
+says parsing error with list object not
+an iterator I'm going to go ahead and
+copy this and paste it back in I'm going
+just accept this here and if it can
+correct this one issue which is just
+apparently a formatting issue which
+objects or Str yeah steps here um then
+we'll have data imported it's not again
+not a lot of questions but maybe it's
+the start of it if we have more time we
+can go back and update the YouTube stuff
+but even after this we need to get the
+data do the figure out how to utilize
+this similarity search in a useful way
+and then display uh the choices there as
+options okay so we have this
+here we have some formatting things I'm
+going to just run this
+manually hopefully that works that' be
+really nice if it works there we go
+inserts existing embeddings index six F
+six questions and five questions so I
+guess my question is like when we want a
+type of thing chat here so uh we'll stop
+it so
+like you
+know are questions questions two and
+three being inserted into the same uh
+Vector
+store like when we do a similarity
+search is it
+going going
+across um all possible
+questions or are they
+segmented as colle each as a
+collection that's what I don't know
+because I don't like I don't know what
+the concept of collection is I assume
+it's just a stuff within the vector
+store or another sqa database
+okay so they're in separate okay so
+they're separate
+sections so we go here so look at the
+code it's
+segmented when we search we specifically
+query the the um the collection for that
+section oh so number two is is section
+two that's what it's saying this code
+section two questions are only compared
+with section two and section three or
+only with three that makes sense
+okay it prevents irrelevant crosssection
+matches it allows for Section specific
+optimizations if
+needed so that's kind of a start um the
+thing is like I can't imagine we would
+have that much data in the third section
+and um that might be kind of annoying
+but section two seems to be the most
+reliable for us to search against and
+section three would probably have to be
+structured differently for the thing so
+just understand that section two is our
+main section all the other ones just
+don't really work right now so I'm just
+thinking about this for a second and we
+now have a solim search that we can
+utilize so what I would like to do is
+think about the next part which
+is um the interactive part and so they
+say it over here
+but yeah and I know that Dan broke it
+all in those parts but I just want to
+get this done so I'm really just going
+to focus on this last section which is
+the Interactive Learning right because
+this is this is implemented this is
+implemented this is implemented I don't
+want to figure this out in the interface
+I just want to focus on Interactive
+Learning so I'm going to accept accept
+this I want to commit this
+code as my
+WIP I don't want to commit the vector
+store so because that's kind of large so
+in here I'm going to make a um
+in here I'm going to make a dog
+ignore I want to ignore the vector
+store store data
+here and I'm going to go two levels in
+here so that it ignores that as well
+because that's going to be too much for
+us if we have to commit that and I'm
+just going to commit this one
+individually right now so I'm just going
+to say add uh stage
+add
+ignore okay and then it should if we
+refresh
+this should ignore
+that I'm going to say
+[Music]
+ignore because of performance Rance it's
+recommended to ignore by pattern if
+possible I mean I certainly would love
+to that
+yeah I mean like we also just ignore the
+bins and the SQL like three files that
+might be a better strategy here so we
+might go
+[Music]
+bin uh
+sqlite
+3 there we go and that's a lot
+better I'm going to go and just commit
+so now it's a lot smaller right so I'm
+just going to go here CU I don't want to
+commit that entire database or that yeah
+the entire database there so we'll say
+um state
+and so again this is working progress so
+work in progress implement the vector
+store parsing
+questions and ensuring the structure of
+questions are correct I don't know
+something like that and so we'll commit
+that and now what I want is well I lost
+uh where I was here a second ago
+but back over to
+Here Local file here we go um and so now
+what I want is I want that final
+implementation now we still need audio
+to text and that's something we can
+figure out as a separate step um but I'm
+going to go and take a look
+at this here and we have render
+interactive
+stage and so what I want to do
+here is I think we can go here and say
+um if I select this
+here right and we say select I think
+it's a select is that what it
+is we have ET
+sign selection this is probably from G
+GitHub GitHub copilot because I get them
+mixed up here but the idea is that I
+want to go here and just say we'll bring
+this into chat and it's probably
+providing those specific lines I'm going
+to say um now that we have
+um our Vector
+store implemented with data we need to
+um
+implement this frontend
+code so we should be able
+to
+um ask for a type of question to be
+generated it should use Vector
+search to pull similar
+questions and then uh use that for rag
+to
+to generate the question and then
+display
+it should still be
+using Amazon
+bedrock with Nova
+models okay so I'll go ahead and do that
+and I'm just hoping that it does it you
+know because I just want it done there's
+one part that's not complete which is
+the audio generation but we'll give this
+a moment okay all right let's take a
+look and see if it did our work for us
+um so I'm going
+here not exactly here we need to oh it
+did quite a
+bit
+[Music]
+use no that's not
+it no that's not
+it oh you know
+what sorry you were on chat mode
+please try
+now to implement what you wanted
+to and now we'll see what it can
+do all right so now this is generated
+let's go take a look
+here so created question generator. I'm
+not
+sure where this was created CU here was
+tring to do an interactive
+right um oh here it is okay
+NOA
+light invoke Bedrock so it's using
+invoke model it's interesting because I
+don't want use conversational model it
+doesn't really matter I mean like if
+we're having a conversation then sure
+and the other ones we aren't but we are
+us using the converse API if we want to
+get tool use
+right but I guess my thought is like if
+we want this to call out and do rag
+wouldn't we need to do that or we could
+do that in a separate step so we'll go
+look here generate similar
+question right and so here we have this
+being utilized here but this is not the
+way that I think Duan wanted us to use
+this because again Amazon Bedrock
+Converse API has tool use built into it
+right and so what we could
+do that's kind of hard to say because
+like R occurs before you do that but if
+we want to we want to generate out
+um uh the voice stuff then that could
+come afterward
+see I'm not sure I mean like this is
+still going to
+work but you know Should I stick to
+Doan's vision of using tool use and um
+having that or continue on this and this
+is where I don't really
+know
+um because like if we had an agent then
+the agent would have been more powered
+so I don't know maybe maybe we'd have to
+rethink this but as long as it works
+that's all I care about a create prompt
+for generating a new question based on
+the following example listening uh
+listening questions create a new
+question about topic the question should
+follow the same format different
+examples make sure the questions test
+listenting comprehension and has a clear
+clear a correct answer the other
+challenge is like how's this going to
+tie back to our learning exercises
+Because unless there are key words that
+we know that are being used for our
+language portal how is it going to grade
+that and so we would have to then parse
+it and then determine if any of those
+words are used and then ping it back to
+the language portal which we didn't
+figure out here let's take a look here
+and say generate a new question
+following the exact same as format
+including all components make sure the
+question is challenging but fair and the
+options are plausible not the best
+prompt but it's fine we go down here and
+we take a look that looks
+okay and so we're getting data here if
+we go back to our main
+doy it's incorporating
+it you can see we don't have the audio
+feature which is totally fine but we'll
+go ahead and accept all changes I want
+to now go and run this and see if it
+works
+and we'll say back end back end we'll
+say front end here sorry
+LS no no no no no no we'll do streamlit
+unless we're already running out another
+tab no we're not so we'll say
+streamlit
+frontend
+main.py we got to put run in front of it
+always kind of forget to do that so we
+go ahead and do
+that and I'm going to go
+back to over
+here to this one and I'm G to give this
+a nice
+refresh and so here we see
+um some import
+issues because it didn't import it so we
+go ahead and tell that it just needs to
+put the import statements at the top
+probably
+yeah I didn't import
+it um hold on no no are are you
+sure didn't import it into
+main.py because it was going really in
+the wrong direction
+there yeah yeah see that's what it was
+again you can't just let it do whatever
+it wants you have to check and even
+though I'm not looking at everything I'm
+looking enough to know that it wasn't
+doing that so we'll go ahead and accept
+that change and I don't need it to run
+it but I'll go ahead and stop this and
+start it up again and we're going to go
+back over to our
+browser we'll give this a
+refresh okay and we'll go down to
+Interactive
+Learning which is this section here and
+so here you know we have daily
+conversation shopping select topic this
+is not what I really want I mean it's
+fine but why can't I choose my own topic
+right
+so I don't like the
+topics
+H dialog practice phrase matching so
+it's interesting now we can toggle
+between those two
+here but let's just even though I don't
+like these topics I mean they're just
+Fields but we'll go ahead here and
+choose
+um restaurant okay we'll generate the
+new question we'll see what
+happens I get nothing we'll go back over
+to
+here and we'll go ahead and grab this
+and so it's clearly formatting wrong and
+we'll let it try to fix that in the
+main.py we'll give it a moment there
+give it just a second so here it might
+have corrected that format so yeah
+that's going to help it right there I'm
+going to go yeah it's using the old one
+and so we'll go ahead and stop this and
+start it back up again you know if I'm
+writing this by hand i' probably get
+much better
+code but you know again we just want to
+get things done so we'll go ahead and
+give this a refresh
+here and we'll go back into Interactive
+Learning we have daily conversation
+we'll generate a new question we're
+going to see what we get
+back
+and do we get an
+error so really it's just really
+configured wrong can can we just use
+Converse API
+instead like how we do in
+the
+chaty and fix these fix these uh API
+issues okay um you know invoke model
+makes the most sense to use but when its
+output isn't like formatted in a
+consistent way and it's really annoying
+and then even if this happens and we're
+going to be questioning like what is the
+output back from Nova Pro let's just
+tell it to be consistent with the new
+one even though invoke model makes a
+little bit more sense
+we wait a moment here for this to be
+changed update the message format
+simplify the response handling to
+extract the text content should now work
+properly oh yes you're right we'll see
+we'll go back over to
+here we'll refresh this we'll go back to
+this we'll generate a new question we're
+going to wait a moment here we get back
+a
+scenario um so we have kaisha kaisha no
+toine so there's they're at work there's
+a guy guy and a man at work and they're
+having a conversation this is looking
+really good so far
+um so I guess my question is
+like I'm going to go to chat and I want
+to ask you like this is the result this
+is the result I got
+back is this an original question or is
+it very similar to an existing one uh
+can you check our questions
+files text files to
+determine because I want to know if the
+result that came back if it's good right
+like if it's exactly the same as another
+one it's fine depends if it's a
+derivative but we'll see here we'll give
+it a moment
+so it's here it's saying different
+setting different food options different
+conversation
+structure no I mean it's it seems that
+it's
+adjusting okay you know again this would
+take manual verification using it over
+several several tries um maybe I will
+find out as I use it
+but here we can see we have the
+conversation going the other thing is
+that when they're talking it goes
+between two different people so if we
+want good audio output then the thing
+that we would probably have to do is we
+would have to have a a um if it was a
+man or a woman we'd have to have
+different voices to play out that
+conversation that you'd have one
+specifically signed for the actual
+um for the actual uh narration because
+you'd have to watch other one there's
+someone that narrates
+then there is two people or three or
+four people having a
+conversation so I'm looking at this and
+we have this one
+here and then there's the question
+so two people at
+work the man at work um
+says
+tabog um k
+K to think
+so um I'm guessing
+here it's you know what do you think
+about to eat right now like
+today
+what you know
+eating to eat think about like what do
+you think
+about and so here we
+have
+[Music]
+po Z
+Pizza
+pizzaa do you think we should have
+pizza and then we have here the woman
+saying
+Pizza
+demo um hambu she's talking about a
+burger SK
+so she likes pizza but
+she like pizza's good but I like a
+hamburger and here we have the man
+saying so
+uh
+sesa so it's it's an inflection because
+sodes is like it is so it is like as a
+question
+J and then we have
+here Pizza to
+hamburger
+no do
+SC and then she says Pizza
+day and this is a word I should know
+um is that like an error
+[Music]
+word I think it's to
+decide okay so I think she says you know
+I decided on pizza and so that means the
+answer is pizza so here it
+says so they
+[Music]
+so you know what are they going to be
+eating and the answer is pizza so I'm
+going to submit that see if I get a
+right and we get an error but that is
+the answer so you know when I try to
+submit the
+answer when I try submitting the
+answer I get
+this the other thing that would be nice
+is like can we see the question we had
+generated before and build in the base
+of it but clearly like the question
+generat is really good but the next
+layer of it would be like okay we need
+to solve how we would generate out the
+audio and you'd have to split it up in
+the conversation and so now you need
+more structure because you need to know
+more about who's saying what like who
+are the speakers in the conversation for
+the
+audio there it's happening because our
+generated question doesn't have the
+options feel properly populated let me
+go fix that so it's going to go fix that
+okay
+all right so we have here I apologize
+for there let me correct the tool modifi
+The Prompt explicitly exactly four
+numbered questions yeah because it's
+always supposed to return four for those
+but we'll go ahead and stop and restart
+it I'm going to make my way back over to
+the application itself and we'll give
+this another go now I would like to have
+more options or be able to spec uh
+choose a topic but I guess because this
+is the jlpt we really should probably
+limit the the amount of things they can
+enter for Generation Um keep it nice and
+simple now it should be starting back up
+maybe I mess this up
+here I need to put the run back in here
+we'll go ahead and do
+that and we'll give this a nice refresh
+here I'll go back over to here I'm going
+to go to our daily
+conversation uh we'll say travel we'll
+try this
+one and so here we have and really likes
+to do the boy girl thing because that's
+what all these questions having them but
+we have the the man and the woman um r r
+so
+traveling no I'm not sure what that
+is so we're talking about
+traveling I'm not sure what that
+is so
+here uh
+[Music]
+so he
+and we're looking about traveling
+[Music]
+wat so I'm again not doing the best here
+maybe that's the location but we go
+through here and then we have an option
+so I can see here they're talking about
+like locations so down here we have
+franu uh do like go to France or or or
+Germany so basically I think they're
+trying to decide where they want to go
+right oh this is a Cooney this word's
+Cooney right here so um it
+says
+here
+yo
+y oh Europe okay so the
+woman in
+Europe what country does she want to
+travel to and so they're listing them
+out and so we figured out now I'd have
+to spend more time trying to read the
+question but I'm not going to do that
+I'm going to submit the answer see what
+we get and we still get this come on
+it's not even trying here to help us you
+serious come
+on did you oh you know what it's in
+right great sorry can you update the
+code for
+me that's why we're in uh chat mode
+mhm I was about to blame the tool but
+the problem was the tool
+user so we give that a moment to
+generate but yeah the um I can see the
+trick here is like we would still
+need the
+audio
+right and we would need it to extract it
+out so it could play the audio a file
+and parse it together we'd also probably
+need FFM Peg because FFM Peg would be
+used to like Stitch the audio together
+and we' have to install that I don't
+know why it's taking so freaking long to
+implement this uh can we just accept all
+change like what's going on
+here it going or
+what stop here try
+again try again
+it shouldn't take that
+long we'll give it a moment when server
+CLS a bit slow here updated the code to
+ensure questions have the three things
+we'll go ahead and accept that we'll go
+back we'll stop it we'll restart it
+we'll take a look we'll see if it works
+now um and so now we'll go here I'll
+generate out another question uh by
+going to Interactive Learning I'm going
+to go ahead and choose restaurant this
+time we'll generate it out um I'm not
+going to check what it is I'm just going
+to choose one submit the answer I just
+want to
+see come on like what is going on we
+already told it to fix this come
+on fix it fix it fix it fix it fix it
+fix it fix it come on fix
+it just fix
+it because I'm almost two hours in here
+I'm getting kind of tired there is
+happening because we trying to access
+correct answer from the feedback
+dictionary when it might uh might be
+none let me fix it in the front end okay
+great
+I thought that's what you were doing in
+the first place maybe because it edited
+this one and that's her problem okay I
+wasn't paying attention let's go and
+give it another moment it's still
+editing I
+guess but I'm just thinking like okay we
+get this working and then audio
+generation but audio generation again
+requires multiple voices it needs FFM
+Peg to put natural spacing in it um now
+the feedback display should work without
+errors we'll go ahead and do this okay
+so we'll go ahead and stop this start
+this
+again and we'll try this one more time
+I'm going to go back up to the top here
+we'll run this
+again and we will go
+here and we'll generate a restaurant
+we'll generate that
+out we have a
+scenario and it doesn't tell us what all
+it's got to do is tell if it gives us
+the correct answer so we don't want
+feedback oh it's right here right we
+have this right here unable to generate
+feedback so the correct answer is this
+you know the interface is kind of
+confusing
+so you know when I when I choose my
+answer I get feedback form pop up
+feedback which it can't
+do and it's not clear if I got the
+answer correct or or wrong it tells me
+the correct answer in the side but it's
+confusing can you make the
+UI less confusing okay so we go ahead
+and do
+that okay and we'll give it a moment to
+do that all right so it's made UI
+improvements let's go take a look here
+and see what we get we're going to run
+this again I'm going to go back over to
+here I'm going to bring this on down
+we're going to give this a hard refresh
+we are going to go down to the ground um
+to this one here and I mean all this
+other stuff is okay but I really just
+need this interactive section now
+because it's in such a good working
+state I'm going to go ahead and generate
+this one out and we'll give it a moment
+and so now we have this I'm going to
+choose my answer
+submit and now it's really really clear
+right so that was my answer this is the
+correct answer right that's perfect so
+now the next thing I'd like to do is
+just say like rip out the stuff I'm not
+using so I'm going to go ahead to back
+to get smart and just say like uh
+refined we're going to stage stage all
+changes here just say refined
+UI and I'm going to go back here and
+accept all the changes we're going to
+say okay um we are only using
+the we go back to the main
+the render interactive
+stage can we rip out every rip out
+everything else in the uh
+streamlet in the
+main.py including the sidebar so we can
+just
+focus on that
+stage so we'll go ahead and let it do
+that we'll do a bit of cleanup and I
+don't know we're two hours in and I'm
+just deciding whether I want to do the
+audio part or leave it for you folks
+here I think I'll do a little bit of it
+um we just give me a moment all right so
+I think it's ripped out all the stuff
+here let me take a
+look uh render chat stage no it's still
+working so we're just going
+to let me try to clean up more yeah
+because there's still a lot in
+here give it a moment be back in just a
+moment all right let's see what it's
+saying now let me replace the old files
+with the new
+ones what what old
+files oh so try to simplify from yeah
+sure fine why
+not and so I guess it did a like a full
+replace here
+okay so let's take a look and see what
+we have and maybe our app will be just a
+bit more slim down here so we'll go back
+over to here give us a nice hard
+refresh and so now it's exactly that so
+we have dialogue practice we can choose
+our topic we'll generate it make sure
+it's still works is generating there we
+go and we'll choose an example here and
+we'll click
+this and we have this so I would say
+what I'm missing now it' be nice to have
+the history of it so if I want to go
+practice the same one I can do that but
+what's missing here is the audio right
+but I'm going to stop the video here and
+break this into two separate videos
+because this is getting pretty loaded up
+um so let me go ahead I'm just going to
+go and Commit This and we'll say
+stage um stage we just say clean uh
+removed all unne uh all unused um UI
+components right so we'll go ahead and
+do that and we'll do that for the next
+video

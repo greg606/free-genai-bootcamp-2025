@@ -1,12 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "listening-comp"
 version = "0.1.0"
-description = "Add your description here"
+authors = [
+    {name = "User", email = "user@example.com"},
+]
+description = "German listening comprehension exercise generator"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "boto3>=1.37.1",
     "chromadb>=0.6.3",
-    "streamlit>=1.42.2",
+    "streamlit>=1.27.0",
     "youtube-transcript-api>=0.6.3",
+    "python-dotenv>=1.0.0",
+    "gTTS>=2.5.0",
+    "openai>=1.6.0",
+    "requests>=2.31.0",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/listening-comp"
+"Bug Tracker" = "https://github.com/yourusername/listening-comp/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["backend", "frontend"]
